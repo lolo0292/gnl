@@ -1,0 +1,23 @@
+Goal:
+- Print each line one by one (so when \n is reached)
+- Print NULL when there is an error or when the end is reached
+- Avoid memory leak
+
+Steps:
+- Handle data with a clinked list to store temporarly the text read
+- Store the text read in stash which will change with each read call
+
+- Read the data with function read 
+			(ssize_t read(int fildes, void *buf, size_t nbytes))
+- fildes : FD from which to read
+- *buf : a pointer to the buffer in which the data read is stored
+- nbytes : max nbr of bytes to read from fd and store in the buffer
+- data will be stored in the stash
+- if \n found --> reading stops full line is found
+
+- extract line
+- traverse the content stored in stash
+- a line ends when \n found or end of file
+
+- clean up the data 
+- after extracting a line free the stash
