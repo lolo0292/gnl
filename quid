@@ -3,7 +3,7 @@ Goal:
 - Print NULL when there is an error or when the end is reached
 - Avoid memory leak
 
-Steps:
+Steps to read a line:
 - Handle data with a clinked list to store temporarly the text read
 - Store the text read in stash which will change with each read call
 
@@ -20,4 +20,5 @@ Steps:
 - a line ends when \n found or end of file
 
 - clean up the data 
-- after extracting a line free the stash
+- after extracting a line the remaining data is kept for next call
+- if all has been read the stash is freed
