@@ -22,3 +22,4 @@ Steps to read a line:
 - clean up the data 
 - after extracting a line the remaining data is kept for next call
 - if all has been read the stash is freed
+
